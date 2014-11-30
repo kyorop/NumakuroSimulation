@@ -12,6 +12,7 @@ SceneManager::SceneManager()
 void SceneManager::ChangeScene(std::shared_ptr<IScene> nextScene)
 {
 	scene = nextScene;
+	scene->Init();
 }
 
 void SceneManager::Initialize()

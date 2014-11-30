@@ -7,7 +7,8 @@ enum Qualification
 {
 	SaveMoney,//節約
 	Cook,//料理
-	Trainer//トレーニング
+	Trainer,//トレーニング
+	BattleBonus
 };
 
 //アイテムの種類

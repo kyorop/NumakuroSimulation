@@ -15,6 +15,7 @@ IScene::~IScene()
 void IScene::ChangeScene(std::shared_ptr<IScene> nextScene)
 {
 	manager->ChangeScene(nextScene);
+
 }
 
 void IScene::Init()

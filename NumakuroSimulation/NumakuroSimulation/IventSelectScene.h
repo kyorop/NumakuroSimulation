@@ -7,9 +7,27 @@ class IventSelectScene
 {
 private:
 	int GHandle;
+	int ivents[6];
 public:
 	IventSelectScene();
 	void Update() override;
+	const int x;
+	const int y;
+	int x_box;
+	int y_box;
+	bool inputFlag;
+	char* eventStrings[6];
 	void Draw() override;
-	
+
+	enum Event
+	{
+		TRAINING,
+		BATTLE,
+		FEED,
+		EXAMINATION,
+		SHOPPING,
+		STUDY,
+	};
+
+	Event eventCount;
 };
