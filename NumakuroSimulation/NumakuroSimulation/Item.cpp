@@ -20,7 +20,7 @@ int Item::GetCost()
 //アイテムの種類取得
 ItemType Item::GetType()
 {
-	return Food;//仮実装
+	return Food_type;//仮実装
 }
 
 //アイテム名取得
@@ -44,5 +44,5 @@ int Food::GetRecoveryValue()
 
 int TrainingItem::GetRisingValue()
 {
-	return 0;
+	return 0;//仮実装
 }
