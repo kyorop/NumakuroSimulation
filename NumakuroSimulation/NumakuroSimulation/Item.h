@@ -45,7 +45,7 @@ protected:
 };
 
 //食べ物
-class Food:Item
+class Food:public Item
 {
 public:
 	Food();
@@ -57,7 +57,7 @@ private:
 };
 
 //トレーニングアイテム
-class TrainingItem:Item
+class TrainingItem :public Item
 {
 public:
 	TrainingItem();
@@ -66,7 +66,7 @@ public:
 };
 
 //戦闘時アイテム
-class PowerItem:Item
+class PowerItem :public Item
 {
 public:
 	PowerItem();

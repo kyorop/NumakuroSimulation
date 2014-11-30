@@ -22,6 +22,7 @@ void GameManager::Init()
 	_satiety = 100;
 	_currentWeek = 1;
 	_currentMystery = Vector2(0, 0);
+	std::vector<Item> its{ Food("Water", 10) };
 }
 
 //購入可能アイテムリスト取得
@@ -95,7 +96,7 @@ int GameManager::DoBattle(PowerItem* powerUpItem)
 	}
 
 	_satiety -= 100;//仮の値
-	if (_battlePower >= battlPpower_enemy);
+	if (_battlePower >= battlPpower_enemy)
 	{
 		_money += 500;//仮の値
 	}
