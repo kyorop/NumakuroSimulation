@@ -22,7 +22,7 @@ void GameManager::Init()
 	_satiety = 100;
 	_currentWeek = 1;
 	_currentMystery = Vector2(0, 0);
-	std::vector<Item> its{ Food("Water", 10) };
+	std::vector<Item> its{ Food("Water", 10), Food("Water", 10) };
 }
 
 //購入可能アイテムリスト取得
