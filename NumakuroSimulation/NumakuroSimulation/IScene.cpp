@@ -2,6 +2,7 @@
 #include "scenemanager.h"
 
 SceneManager* IScene::manager;
+GameManager* IScene::gameManager;
 
 IScene::IScene()
 {

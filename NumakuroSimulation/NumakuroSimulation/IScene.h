@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <memory>
+#include "GameManager.h"
 
 class SceneManager;
 class IScene
@@ -7,6 +8,7 @@ class IScene
 public:
 	explicit IScene();
 	virtual ~IScene();
+	static GameManager* gameManager;
 protected:
 	void ChangeScene(std::shared_ptr<IScene> nextScene);
 

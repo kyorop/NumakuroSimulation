@@ -1,5 +1,6 @@
 ﻿#include "EndingScene.h"
-#include <DxLib.h>
+#include <dxlib.h>
+#include "gameoverscene.h"
 
 EndingScene::EndingScene()
 {
@@ -13,6 +14,8 @@ EndingScene::EndingScene()
 
 void EndingScene::Update()
 {
+	if (CheckHitKey(KEY_INPUT_8))
+		ChangeScene(std::make_shared<GameOverScene>());
 }
 
 void EndingScene::Draw()
