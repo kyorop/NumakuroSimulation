@@ -23,7 +23,7 @@ void GameManager::Purchase(Item item)
 {
 	int cost = item.GetCost();
 	_money -= cost;//所持金を減らし、
-	int n = _purchasableItems.size();
+	size_t n = _purchasableItems.size();
 
 	for (size_t i = 0; i < n; i++)
 	{
@@ -97,5 +97,5 @@ int GameManager::GetWeek()
 //現在のミステリーパラメータを取得
 Vector2 GameManager::GetCurrentMystery()
 {
-	return Vector2(0, 0);
+	return Vector2(_currentMystery);
 }
