@@ -2,6 +2,14 @@
 
 #include<string>
 
+//資格列挙体
+enum Qualification
+{
+	SaveMoney,//節約
+	Cook,//料理
+	Trainer//トレーニング
+};
+
 //アイテムの種類
 enum ItemType
 {
@@ -30,19 +38,19 @@ public:
 	int GetImageHandlar();
 };
 
-class Food
+class Food:Item
 {
 public:
 	int GetRecoveryValue();
 };
 
-class TrainingItem
+class TrainingItem:Item
 {
 public:
 	int GetRisingValue();
 };
 
-class PowerItem
+class PowerItem:Item
 {
 public:
 	int GetRisingValue();
