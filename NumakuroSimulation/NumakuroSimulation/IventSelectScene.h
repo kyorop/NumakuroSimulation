@@ -6,6 +6,7 @@ class IventSelectScene
 	:public IScene
 {
 private:
+	int week;
 	int GHandle;
 	int GMizu;
 	int GMizu1;
