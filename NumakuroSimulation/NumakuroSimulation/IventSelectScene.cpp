@@ -7,6 +7,7 @@ IventSelectScene::IventSelectScene()
 	GHandle = LoadGraph("numakuro/ゲーム画面.png");
 }
 
+
 void IventSelectScene::Update()
 {
 	if (CheckHitKey(KEY_INPUT_2))
