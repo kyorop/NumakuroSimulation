@@ -26,5 +26,5 @@ void IScene::Fin()
 
 void IScene::SetSceneManager(SceneManager* manager)
 {
-	this->manager = manager;
+	IScene::manager = manager;
 }

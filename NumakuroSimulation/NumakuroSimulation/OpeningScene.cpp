@@ -9,7 +9,7 @@ OpeningScene::~OpeningScene()
 void OpeningScene::Update()
 {
 	if (CheckHitKey(KEY_INPUT_SPACE))
-		ChangeScene(std::make_shared<IventSelectScene>(this));
+		ChangeScene(std::make_shared<IventSelectScene>());
 }
 
 void OpeningScene::Draw()
