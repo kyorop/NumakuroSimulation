@@ -4,6 +4,8 @@
 
 OpeningScene::OpeningScene()
 {
+	op[0] = "今日、あなたのもとに新しいポケモンがやってきました。";
+	op[1] = "ミズゴロウを可愛がって\n立派なポケモンにしてあげてくださいね";
 	GHandle = LoadGraph("numakuro/OP.png");
 }
 

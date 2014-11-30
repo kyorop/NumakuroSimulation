@@ -5,6 +5,7 @@ class OpeningScene
 	:public IScene
 {
 private:
+	char *op[2];
 	int GHandle;
 public:
 	OpeningScene();
