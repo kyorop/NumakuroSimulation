@@ -109,6 +109,12 @@ void IventSelectScene::Draw()
 		DrawGraph(x+60*i, y, ivents[i], true);
 	}
 
+	if (IScene::gameManager->GetSatiety() >= 80)
+		GMizu = GMizu2;
+	else
+		GMizu = GMizu1;
+	DrawGraph(0, 0, GMizu, true);
+
 
 
 	DrawBox(x_box, y_box, x_box + 50, y_box + 50, GetColor(255, 0, 0), false);
@@ -138,12 +144,6 @@ void IventSelectScene::Draw()
 		break;
 	}
 
-
-	if (IScene::gameManager->GetSatiety() >= 80)
-		GMizu = GMizu2;
-	else
-		GMizu = GMizu1;
-	DrawGraph(0, 0, GMizu, true);
 }
 
 
