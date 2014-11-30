@@ -2,6 +2,7 @@
 #include <memory>
 #include "iscene.h"
 #include "titlescene.h"
+#include "IventSelectScene.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine, int nCmdShow)
 {
@@ -13,7 +14,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
 
 	//•Ï”éŒ¾êŠ
 	std::shared_ptr<IScene> scene;
-	scene = std::make_shared<TitleScene>();
+	scene = std::make_shared<IventSelectScene>();
 
 	while (true)
 	{
