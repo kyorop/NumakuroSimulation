@@ -23,7 +23,7 @@ void GameManager::Purchase(Item item)
 {
 	int cost = item.GetCost();
 	_money -= cost;//所持金を減らし、
-	int n = _purchasableItems.size();
+	size_t n = _purchasableItems.size();
 
 	for (size_t i = 0; i < n; i++)
 	{
@@ -81,6 +81,21 @@ int GameManager::GetCleverness()
 {
 	return _cleverness;
 }
-int GameManager::GetHavingManey();
-int GameManager::GetWeek();
-Vector2 GameManager::GetCurrentMystery();
+
+//現在の所持金を取得
+int GameManager::GetHavingManey()
+{
+	return _money;
+}
+
+//現在の週を取得
+int GameManager::GetWeek()
+{
+	return _currentWeek;
+}
+
+//現在のミステリーパラメータを取得
+Vector2 GameManager::GetCurrentMystery()
+{
+	return Vector2(_currentMystery);
+}
