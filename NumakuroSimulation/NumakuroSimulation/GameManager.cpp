@@ -22,7 +22,15 @@ void GameManager::Init()
 	_satiety = 100;
 	_currentWeek = 1;
 	_currentMystery = Vector2(0, 0);
-	std::vector<Item> its{ Food("乾燥ワカメ", 20), Food("チキンクリスプ", 50), Food("ピッツァ",80),TrainingItem("プロテイン",20),TrainingItem("強くなれる薬",50),TrainingItem("もっと強くなる薬",80), PowerItem("リポD",20), PowerItem("レッドブル",50), PowerItem("安息香酸ナトリウムカフェイン",80) };
+	std::vector<Item> its{ Food("乾燥ワカメ", 70, 20),
+		Food("チキンクリスプ", 140, 50),
+		Food("ピッツァ", 200, 80),
+		TrainingItem("プロテイン", 70, 20),
+		TrainingItem("強くなれる薬", 140, 50),
+		TrainingItem("もっと強くなる薬", 200, 80),
+		PowerItem("リポD", 70, 20),
+		PowerItem("レッドブル", 140, 50),
+		PowerItem("安息香酸ナトリウムカフェイン", 200, 80) };
 }
 
 //購入可能アイテムリスト取得

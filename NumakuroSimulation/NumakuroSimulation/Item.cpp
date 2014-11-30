@@ -1,8 +1,11 @@
 #include "Item.h"
 
 
-Item::Item()
+Item::Item(std::string name, int cost, ItemType type)
 {
+	_name = name;
+	_cost = cost;
+	_type = type;
 }
 
 
@@ -29,29 +32,16 @@ std::string Item::GetItemName()
 	return _name;
 }
 
-//イメージハンドラ取得
-int Item::GetImageHandlar()
-{
-	return _imageHandlar;
-}
-
-
-
 
 /*以下Foodクラス実装*/
 
-Food::Food()
-{
-}
 Food::~Food()
 {
 }
 
-Food::Food(std::string name, int recoveryValue)
+Food::Food(std::string name, int cost, int recoveryValue) :Item(name,cost,Food_type)
 {
-	_name = name;
 	_recoveryValue = recoveryValue;
-	_type = Food_type;
 }
 
 int Food::GetRecoveryValue()
@@ -61,18 +51,13 @@ int Food::GetRecoveryValue()
 
 /*以下TrainingItemクラス実装*/
 
-TrainingItem::TrainingItem()
-{
-}
 TrainingItem::~TrainingItem()
 {
 }
 
-TrainingItem::TrainingItem(std::string name, int rigingValue)
+TrainingItem::TrainingItem(std::string name, int cost, int rigingValue) :Item(name, cost, Training_type)
 {
-	_name = name;
 	_rigingValue = rigingValue;
-	_type = Training_type;
 }
 
 int TrainingItem::GetRisingValue()
@@ -82,16 +67,12 @@ int TrainingItem::GetRisingValue()
 
 /*以下PowerItemクラス実装*/
 
-PowerItem::PowerItem()
-{}
 PowerItem::~PowerItem()
 {}
 
-PowerItem::PowerItem(std::string name, int rigingValue)
+PowerItem::PowerItem(std::string name, int cost, int rigingValue) :Item(name, cost, Training_type)
 {
-	_name = name;
 	_rigingValue = rigingValue;
-	_type = PowerUp_type;
 }
 
 int PowerItem::GetRisingValue()
