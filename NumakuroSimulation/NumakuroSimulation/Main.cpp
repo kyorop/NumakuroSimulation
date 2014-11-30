@@ -1,4 +1,7 @@
 #include <DxLib.h>
+#include <memory>
+#include "iscene.h"
+#include "titlescene.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine, int nCmdShow)
 {
@@ -8,11 +11,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
 		return -1;
 	SetDrawScreen(DX_SCREEN_BACK);
 
+	//•Ï”éŒ¾êŠ
+	std::shared_ptr<IScene> scene;
+	scene = std::make_shared<TitleScene>();
+
 	while (true)
 	{
 		ClearDrawScreen();
 
 		//‚±‚±‚É•`‰æˆ—‚µ‚Ä‚Ë
+		scene->Update();
+		scene->Draw();
 
 		ScreenFlip();
 
