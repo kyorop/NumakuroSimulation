@@ -12,8 +12,11 @@ GameManager::~GameManager()
 {
 }
 
-std::vector<Item> GameManager::GetItemList()
+
+std::vector<Item> GameManager::GetPurchasableItems()
 {
+	std::vector<Item> a;
+	return a;//‰¼ˆ—
 }
 
 void GameManager::Purchase(Item item)
@@ -28,12 +31,15 @@ void GameManager::DoFeed(Item food)
 {
 }
 
-std::vector<Qualification> GameManager::GetQualificationList()
+std::vector<Qualification> GameManager::GetAcquirableQualifications()
 {
+	std::vector<Qualification> a;
+	return a;//‰¼ˆ—
 }
 
 bool GameManager::TakeExamination(Qualification qualification)
 {
+	return true;//‰¼ˆ—
 }
 
 void GameManager::DoStudy()

@@ -1,9 +1,7 @@
 #pragma once
 #include <vector>
 #include "Vector2.h"
-
-class Item;
-enum Qualification;
+#include "Item.h"
 
 class GameManager
 {
@@ -12,7 +10,7 @@ public:
 	~GameManager();
 
 	//買い物
-	std::vector<Item> GetItemList();
+	std::vector<Item> GetPurchasableItems();
 	void Purchase(Item item);
 
 	//トレーニング
@@ -22,7 +20,7 @@ public:
 	void DoFeed(Item food);
 
 	//受験
-	std::vector<Qualification> GetQualificationList();
+	std::vector<Qualification> GetAcquirableQualifications();
 	bool TakeExamination(Qualification qualification);
 
 	//勉強
@@ -53,8 +51,8 @@ private:
 	std::vector<Qualification> _acquirableQualifications;//取得可能資格
 	std::vector<Item> _purchasableItems;//購入可能アイテム
 
-	std::vector<Qualification> _havingQualifications;//取得可能資格
-	std::vector<Item> _havingItems;//購入可能アイテム
+	std::vector<Qualification> _havingQualifications;//所持資格
+	std::vector<Item> _havingItems;//所持アイテム
 
 
 };
