@@ -2,6 +2,11 @@
 #include <dxlib.h>
 #include "iventselectscene.h"
 
+OpeningScene::OpeningScene()
+{
+	GHandle = LoadGraph("numakuro/OP.png");
+}
+
 OpeningScene::~OpeningScene()
 {
 }
@@ -14,4 +19,5 @@ void OpeningScene::Update()
 
 void OpeningScene::Draw()
 {
+	DrawGraph(0, 0, GHandle, true);
 }
