@@ -14,7 +14,7 @@ IventSelectScene::IventSelectScene()
 {
 	GHandle = LoadGraph("numakuro/ゲーム画面.png");
 	GMizu1 = LoadGraph("numakuro/1201508991_o.png");
-	GMizu2 = LoadGraph("numakuro/a23e082a.jpg");
+	GMizu2 = LoadGraph("numakuro/a23e082a.png");
 	ivents[0] = LoadGraph("numakuro/トレーニングアイコン.png");
 	ivents[1] = LoadGraph("numakuro/バトルアイコン.png");
 	ivents[2] = LoadGraph("numakuro/餌付けアイコン.png");
