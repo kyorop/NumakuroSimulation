@@ -8,6 +8,7 @@ IventSelectScene::IventSelectScene()
 
 void IventSelectScene::Update()
 {
+	
 }
 
 void IventSelectScene::Draw()
