@@ -69,9 +69,7 @@ void GameManager::DoFeed(Food food)
 
 std::vector<Qualification> GameManager::GetAcquirableQualifications()
 {
-	std::vector<Qualification> a;
-	_currentWeek++;
-	return a;//âºèàóù
+	return std::vector<Qualification>(_acquirableQualifications);
 }
 
 bool GameManager::TakeExamination(Qualification qualification)
