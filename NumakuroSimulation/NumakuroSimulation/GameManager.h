@@ -14,10 +14,10 @@ public:
 	void Purchase(Item item);
 
 	//トレーニング
-	void DoTraining(Item trainingItem);
+	void DoTraining(TrainingItem trainingItem);
 
 	//餌付け
-	void DoFeed(Item food);
+	void DoFeed(Food food);
 
 	//受験
 	std::vector<Qualification> GetAcquirableQualifications();
@@ -27,7 +27,7 @@ public:
 	void DoStudy();
 
 	//ポケモンバトル
-	void DoBattle(Item powerUpItem);
+	void DoBattle(PowerItem powerUpItem);
 
 	//現在のステータス取得
 	std::vector<Qualification> GetHavingQualifications();//所持してる資格リスト
