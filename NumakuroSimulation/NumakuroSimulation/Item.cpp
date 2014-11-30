@@ -70,7 +70,7 @@ TrainingItem::~TrainingItem()
 
 int TrainingItem::GetRisingValue()
 {
-	return 0;//‰¼ŽÀ‘•
+	return _rigingValue;
 }
 
 /*ˆÈ‰ºPowerItemƒNƒ‰ƒXŽÀ‘•*/
@@ -79,4 +79,9 @@ PowerItem::PowerItem()
 {}
 PowerItem::~PowerItem()
 {}
+
+int PowerItem::GetRisingValue()
+{
+	return _rigingValue;
+}
 

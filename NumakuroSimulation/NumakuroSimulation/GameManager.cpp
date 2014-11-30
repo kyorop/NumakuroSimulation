@@ -57,6 +57,7 @@ void GameManager::DoTraining(TrainingItem trainingItem)
 	_currentWeek++;
 }
 
+//餌付け
 void GameManager::DoFeed(Food food)
 {
 	int recovery_value = food.GetRecoveryValue();
@@ -67,23 +68,27 @@ void GameManager::DoFeed(Food food)
 	_currentWeek++;
 }
 
+//受験可能資格リスト取得
 std::vector<Qualification> GameManager::GetAcquirableQualifications()
 {
 	return std::vector<Qualification>(_acquirableQualifications);
 }
 
+//受験
 bool GameManager::TakeExamination(Qualification qualification)
 {
 	_currentWeek++;
 	return true;//仮処理
 }
 
+//勉強
 void GameManager::DoStudy()
 {
 	_cleverness += 100;//仮の値
 	_currentWeek++;
 }
 
+//バトル
 bool GameManager::DoBattle(PowerItem* powerUpItem)
 {
 	int battlPpower_enemy = (GetRand(3) + 1) * 100;//仮の値
