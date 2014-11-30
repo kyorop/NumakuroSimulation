@@ -7,7 +7,8 @@ enum Qualification
 {
 	SaveMoney,//節約
 	Cook,//料理
-	Trainer//トレーニング
+	Trainer,//トレーニング
+	BattleBonus
 };
 
 //アイテムの種類
@@ -22,7 +23,7 @@ enum ItemType
 class Item
 {
 public:
-	Item();
+	Item(std::string name,int cost,ItemType type);
 	~Item();
 
 	//値段取得
@@ -34,22 +35,17 @@ public:
 	//アイテム名取得
 	std::string GetItemName();
 
-	//イメージハンドラ取得
-	int GetImageHandlar();
-
 protected:
 	std::string _name;//名前
 	int _cost;//値段
 	ItemType _type;//アイテムの種類
-	int _imageHandlar;
 };
 
 //食べ物
 class Food:public Item
 {
 public:
-	Food();
-	Food(std::string name, int recoveryValue);
+	Food(std::string name,int cost, int recoveryValue);
 	~Food();
 	int GetRecoveryValue();
 private:
@@ -60,7 +56,7 @@ private:
 class TrainingItem :public Item
 {
 public:
-	TrainingItem();
+	TrainingItem(std::string name, int cost, int rigingValue);
 	~TrainingItem();
 	int GetRisingValue();
 private:
@@ -71,7 +67,7 @@ private:
 class PowerItem :public Item
 {
 public:
-	PowerItem();
+	PowerItem(std::string name, int cost, int rigingValue);
 	~PowerItem();
 	int GetRisingValue();
 private:

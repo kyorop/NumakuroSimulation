@@ -31,6 +31,7 @@ IventSelectScene::IventSelectScene()
 	eventCount = TRAINING;
 }
 
+
 void IventSelectScene::Update()
 {
 	if (CheckHitKey(KEY_INPUT_2))
