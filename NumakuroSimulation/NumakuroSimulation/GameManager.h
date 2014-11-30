@@ -30,7 +30,7 @@ public:
 	void DoStudy();
 
 	//ポケモンバトル
-	int DoBattle(PowerItem* powerUpItem);
+	bool DoBattle(PowerItem* powerUpItem);
 
 	//現在のステータス取得
 	std::vector<Qualification> GetHavingQualifications();//所持してる資格リスト

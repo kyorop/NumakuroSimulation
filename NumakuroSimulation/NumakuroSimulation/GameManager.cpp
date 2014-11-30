@@ -52,7 +52,8 @@ void GameManager::Purchase(Item item)
 void GameManager::DoTraining(TrainingItem trainingItem)
 {
 	/*---戦闘力を上昇させる関数---*/
-	_battlePower += 100;
+	_battlePower += 100;//仮の値
+	_satiety -= 100;//仮の値
 	_currentWeek++;
 }
 
@@ -85,7 +86,7 @@ void GameManager::DoStudy()
 	_currentWeek++;
 }
 
-int GameManager::DoBattle(PowerItem* powerUpItem)
+bool GameManager::DoBattle(PowerItem* powerUpItem)
 {
 	int battlPpower_enemy = (GetRand(3) + 1) * 100;//仮の値
 
@@ -100,6 +101,7 @@ int GameManager::DoBattle(PowerItem* powerUpItem)
 		_money += 500;//仮の値
 	}
 	_currentWeek++;
+	return true;
 }
 
 //所持してる資格リスト
