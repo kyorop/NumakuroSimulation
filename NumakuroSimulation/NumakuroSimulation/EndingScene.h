@@ -3,13 +3,13 @@
 
 class EndingScene
 	:public IScene
-	private:
-
 {
 public:
 	void Update() override;
 	void Draw() override;
 public:
+	int GHandle1;
+	int GHandle2;
 	EndingScene();
 	
 };
