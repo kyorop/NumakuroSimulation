@@ -116,6 +116,7 @@ bool GameManager::DoBattle(PowerItem* powerUpItem)
 {
 	int enemy_power = (GetRand(3) + 1) * 100;//仮の値
 	int powerup = 0;
+	int Quali = 0;
 
 		/*---アイテムで_battlePowerにもたらされる効果---*/
 	if (powerUpItem != NULL)
@@ -123,10 +124,19 @@ bool GameManager::DoBattle(PowerItem* powerUpItem)
 		powerup = powerUpItem->GetRisingValue();
 	}
 
+
 	/*---資格で_battlePowerにもたらされる効果---*/
+	std::vector<Qualification> list = GetHavingQualifications();
+	size_t n = list.size();
+	for (size_t i = 0; i < n; i++)
+	{
+		if (list.at(i) == BattleBonus)
+		{
+			Quali = 40;
+		}
+	}
 
-
-	int power = _battlePower + _satiety + powerup ;//sikakumo
+	int power = _battlePower + _satiety + powerup + Quali ;//sikakumo
 
 	_satiety -= 10;
 	if (power >= enemy_power)
