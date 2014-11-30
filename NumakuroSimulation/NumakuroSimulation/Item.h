@@ -13,9 +13,9 @@ enum Qualification
 //アイテムの種類
 enum ItemType
 {
-	Food = 0,
-	Training = 1,
-	PowerUp
+	Food_type = 0,
+	Training_type = 1,
+	PowerUp_type
 };
 
 //ゲーム内アイテムの基底クラス

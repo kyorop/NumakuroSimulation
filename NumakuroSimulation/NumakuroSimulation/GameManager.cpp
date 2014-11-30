@@ -35,14 +35,18 @@ void GameManager::Purchase(Item item)
 }
 
 //トレーニングを実行します
-void GameManager::DoTraining(Item trainingItem)
+void GameManager::DoTraining(TrainingItem trainingItem)
 {
 	/*---戦闘力を上昇させる関数---*/
 	_battlePower += 100;
 }
 
-void GameManager::DoFeed(Item food)
+void GameManager::DoFeed(Food food)
 {
+	int recovery_value = food.GetRecoveryValue();
+	_satiety += recovery_value;
+
+	//上限を超えたらキャンセルするコードを書く
 }
 
 std::vector<Qualification> GameManager::GetAcquirableQualifications()
@@ -60,8 +64,9 @@ void GameManager::DoStudy()
 {
 }
 
-void GameManager::DoBattle(Item powerUpItem)
+void GameManager::DoBattle(PowerItem powerUpItem)
 {
+
 }
 
 //現在の満腹度を取得
