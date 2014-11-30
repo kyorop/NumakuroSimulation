@@ -1,3 +1,4 @@
+#include <DxLib.h>
 #include "GameManager.h"
 #include "Item.h"
 #include "Vector2.h"
@@ -21,6 +22,7 @@ void GameManager::Init()
 	_satiety = 100;
 	_currentWeek = 1;
 	_currentMystery = Vector2(0, 0);
+	std::vector<Item> its{ Food("Water", 10) };
 }
 
 //購入可能アイテムリスト取得
@@ -43,13 +45,16 @@ void GameManager::Purchase(Item item)
 			_purchasableItems.erase(_purchasableItems.begin() + i);//見つけたら削除
 		}
 	}
+	_currentWeek++;
 }
 
 //トレーニングを実行します
 void GameManager::DoTraining(TrainingItem trainingItem)
 {
 	/*---戦闘力を上昇させる関数---*/
-	_battlePower += 100;
+	_battlePower += 100;//仮の値
+	_satiety -= 100;//仮の値
+	_currentWeek++;
 }
 
 void GameManager::DoFeed(Food food)
@@ -57,27 +62,45 @@ void GameManager::DoFeed(Food food)
 	int recovery_value = food.GetRecoveryValue();
 	_satiety += recovery_value;
 
-	//上限を超えたらキャンセルするコードを書く
+	/*---上限を超えたらキャンセルするコードを書く---*/
+
+	_currentWeek++;
 }
 
 std::vector<Qualification> GameManager::GetAcquirableQualifications()
 {
 	std::vector<Qualification> a;
+	_currentWeek++;
 	return a;//仮処理
 }
 
 bool GameManager::TakeExamination(Qualification qualification)
 {
+	_currentWeek++;
 	return true;//仮処理
 }
 
 void GameManager::DoStudy()
 {
+	_cleverness += 100;//仮の値
+	_currentWeek++;
 }
 
-void GameManager::DoBattle(PowerItem powerUpItem)
+int GameManager::DoBattle(PowerItem* powerUpItem)
 {
+	int battlPpower_enemy = (GetRand(3) + 1) * 100;//仮の値
 
+	if (powerUpItem != NULL)
+	{
+		/*---アイテムで_battlePowerにもたらされる効果---*/
+	}
+
+	_satiety -= 100;//仮の値
+	if (_battlePower >= battlPpower_enemy)
+	{
+		_money += 500;//仮の値
+	}
+	_currentWeek++;
 }
 
 //現在の満腹度を取得

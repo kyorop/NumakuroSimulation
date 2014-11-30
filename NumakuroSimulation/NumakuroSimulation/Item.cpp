@@ -14,35 +14,69 @@ Item::~Item()
 //値段取得
 int Item::GetCost()
 {
-	return 0;//仮実装
+	return _cost;
 }
 
 //アイテムの種類取得
 ItemType Item::GetType()
 {
-	return Food_type;//仮実装
+	return _type;
 }
 
 //アイテム名取得
 std::string Item::GetItemName()
 {
-	return "";//仮実装
+	return _name;
 }
 
 //イメージハンドラ取得
 int Item::GetImageHandlar()
 {
-	return 0;//仮実装
+	return _imageHandlar;
 }
 
 
 
+
+/*以下Foodクラス実装*/
+
+Food::Food()
+{
+}
+Food::~Food()
+{
+}
+
+Food::Food(std::string name, int recoveryValue)
+{
+	_name = name;
+	_recoveryValue = recoveryValue;
+	_type = Food_type;
+}
+
 int Food::GetRecoveryValue()
 {
-	return 0;//仮実装
+	return _recoveryValue;
+}
+
+/*以下TrainingItemクラス実装*/
+
+TrainingItem::TrainingItem()
+{
+}
+TrainingItem::~TrainingItem()
+{
 }
 
 int TrainingItem::GetRisingValue()
 {
 	return 0;//仮実装
 }
+
+/*以下PowerItemクラス実装*/
+
+PowerItem::PowerItem()
+{}
+PowerItem::~PowerItem()
+{}
+
