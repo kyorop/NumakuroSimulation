@@ -1,6 +1,6 @@
 ﻿#include "IventSelectScene.h"
 #include "DxLib.h"
-#include "TitleScene.h"
+#include "shoppingscene.h"
 
 IventSelectScene::IventSelectScene()
 {
@@ -9,11 +9,13 @@ IventSelectScene::IventSelectScene()
 
 void IventSelectScene::Update()
 {
-	if (CheckHitKey(KEY_INPUT_SPACE))
-		ChangeScene(std::shared_ptr<TitleScene>());
+	if (CheckHitKey(KEY_INPUT_2))
+		ChangeScene(std::make_shared<ShoppingScene>());
 }
 
 void IventSelectScene::Draw()
 {
 	DrawGraph(0, 0,GHandle , true);
 }
+
+

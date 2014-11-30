@@ -13,7 +13,7 @@ OpeningScene::~OpeningScene()
 
 void OpeningScene::Update()
 {
-	if (CheckHitKey(KEY_INPUT_SPACE))
+	if (CheckHitKey(KEY_INPUT_1))
 		ChangeScene(std::make_shared<IventSelectScene>());
 }
 

@@ -3,14 +3,15 @@
 
 class EndingScene
 	:public IScene
-
 {
-	int GHandle1;
-	int GHandle2;
+private:
+	int x = 0;//文字送り用
+	int GHandle1,GHandle2;
 public:
 	void Update() override;
 	void Draw() override;
 public:
 	EndingScene();
-	
+private:
+	char *ed[3];
 };
