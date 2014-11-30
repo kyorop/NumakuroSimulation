@@ -36,23 +36,41 @@ public:
 
 	//イメージハンドラ取得
 	int GetImageHandlar();
+
+protected:
+	std::string _name;//名前
+	int _cost;//値段
+	ItemType _type;//アイテムの種類
+	int _imageHandlar;
 };
 
+//食べ物
 class Food:Item
 {
 public:
+	Food();
+	Food(std::string name, int recoveryValue);
+	~Food();
 	int GetRecoveryValue();
+private:
+	int _recoveryValue;//回復量
 };
 
+//トレーニングアイテム
 class TrainingItem:Item
 {
 public:
+	TrainingItem();
+	~TrainingItem();
 	int GetRisingValue();
 };
 
+//戦闘時アイテム
 class PowerItem:Item
 {
 public:
+	PowerItem();
+	~PowerItem();
 	int GetRisingValue();
 };
 
