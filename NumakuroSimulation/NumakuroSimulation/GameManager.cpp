@@ -102,6 +102,18 @@ int GameManager::DoBattle(PowerItem* powerUpItem)
 	_currentWeek++;
 }
 
+//所持してる資格リスト
+std::vector<Qualification> GameManager::GetHavingQualifications()
+{
+	return std::vector<Qualification>(_havingQualifications);
+}
+
+//所持してるアイテムリスト
+std::vector<Item> GameManager::GetHavingItems()
+{
+	return std::vector<Item>(_havingItems);
+}
+
 //現在の満腹度を取得
 int GameManager::GetSatiety()
 {
