@@ -7,6 +7,9 @@ class IventSelectScene
 {
 private:
 	int GHandle;
+	int GMizu;
+	int GMizu1;
+	int GMizu2;
 	int ivents[6];
 public:
 	IventSelectScene();

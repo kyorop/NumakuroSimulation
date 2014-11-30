@@ -13,6 +13,8 @@ IventSelectScene::IventSelectScene()
 	y(450)
 {
 	GHandle = LoadGraph("numakuro/ゲーム画面.png");
+	GMizu1 = LoadGraph("numakuro/1201508991_o.png");
+	GMizu2 = LoadGraph("numakuro/a23e082a.png");
 	ivents[0] = LoadGraph("numakuro/トレーニングアイコン.png");
 	ivents[1] = LoadGraph("numakuro/バトルアイコン.png");
 	ivents[2] = LoadGraph("numakuro/餌付けアイコン.png");
@@ -109,6 +111,8 @@ void IventSelectScene::Draw()
 		DrawGraph(x+60*i, y, ivents[i], true);
 	}
 
+
+
 	DrawBox(x_box, y_box, x_box + 50, y_box + 50, GetColor(255, 0, 0), false);
 	DrawBox(x_box+1, y_box+1, x_box + 49, y_box + 49, GetColor(255, 0, 0), false);
 
@@ -139,6 +143,10 @@ void IventSelectScene::Draw()
 	DrawFormatString(30, 8, GetColor(0, 0, 0), "満腹度：%d", gameManager->GetSatiety());
 	DrawFormatString(30, 25, GetColor(0, 0, 0), "所持金：%d", gameManager->GetHavingManey());
 	DrawFormatString(150, 25, GetColor(0, 0, 0), "かしこさ：%d", gameManager->GetCleverness());
-}
+	if (IScene::gameManager->GetSatiety() >= 80)
+		GMizu = GMizu2;
+	else
+		GMizu = GMizu1;
+	DrawGraph(0, 0, GMizu, true);}
 
 
