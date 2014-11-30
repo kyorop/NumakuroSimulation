@@ -33,11 +33,23 @@ public:
 	std::vector<Qualification> GetHavingQualifications();//所持してる資格リスト
 	std::vector<Item> GetHavingItems();//所持してるアイテムリスト
 	
+	//現在の満腹度を取得
 	int GetSatiety();
+
+	//現在の戦闘力を取得
 	int GetBattlePower();
+
+	//現在の賢さを取得
 	int GetCleverness();
+
+	//現在の所持金を取得
 	int GetHavingManey();
+
+	//現在の週を取得
 	int GetWeek();
+
+	//現在のミステリーパラメータを取得
+	Vector2 GetCurrentMystery();
 	
 
 private:
