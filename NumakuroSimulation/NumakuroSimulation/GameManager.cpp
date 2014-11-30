@@ -1,5 +1,6 @@
 #include "GameManager.h"
 #include "Item.h"
+#include "Vector2.h"
 
 
 GameManager::GameManager()

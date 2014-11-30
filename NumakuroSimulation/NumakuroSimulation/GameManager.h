@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include "Vector2.h"
 
 class Item;
 enum Qualification;
@@ -47,6 +48,7 @@ private:
 	int _cleverness;//賢さ
 	int _money;//所持金
 	int _currentWeek;//週
+	Vector2 _currentMystery;//現在のミステリーパラメタ
 
 	std::vector<Qualification> _acquirableQualifications;//取得可能資格
 	std::vector<Item> _purchasableItems;//購入可能アイテム
