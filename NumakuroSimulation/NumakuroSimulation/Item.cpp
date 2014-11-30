@@ -68,6 +68,13 @@ TrainingItem::~TrainingItem()
 {
 }
 
+TrainingItem::TrainingItem(std::string name, int rigingValue)
+{
+	_name = name;
+	_rigingValue = rigingValue;
+	_type = Training_type;
+}
+
 int TrainingItem::GetRisingValue()
 {
 	return _rigingValue;
@@ -79,6 +86,13 @@ PowerItem::PowerItem()
 {}
 PowerItem::~PowerItem()
 {}
+
+PowerItem::PowerItem(std::string name, int rigingValue)
+{
+	_name = name;
+	_rigingValue = rigingValue;
+	_type = PowerUp_type;
+}
 
 int PowerItem::GetRisingValue()
 {
