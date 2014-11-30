@@ -1,10 +1,14 @@
 ﻿#include "IventSelectScene.h"
+<<<<<<< HEAD
+#include "scenemanager.h"
+=======
 #include "DxLib.h"
 
 IventSelectScene::IventSelectScene()
 {
 	GHandle = LoadGraph("../../沼ゲー素材/ゲーム画面.png");
 }
+>>>>>>> 86211c5064fdae8df06e57690894588a6c35b6fb
 
 void IventSelectScene::Update()
 {

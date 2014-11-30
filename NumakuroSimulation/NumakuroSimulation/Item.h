@@ -13,9 +13,9 @@ enum Qualification
 //アイテムの種類
 enum ItemType
 {
-	Food = 0,
-	Training = 1,
-	PowerUp
+	Food_type = 0,
+	Training_type = 1,
+	PowerUp_type
 };
 
 //ゲーム内アイテムの基底クラス
@@ -36,23 +36,45 @@ public:
 
 	//イメージハンドラ取得
 	int GetImageHandlar();
+
+protected:
+	std::string _name;//名前
+	int _cost;//値段
+	ItemType _type;//アイテムの種類
+	int _imageHandlar;
 };
 
-class Food:Item
+//食べ物
+class Food:public Item
 {
 public:
+	Food();
+	Food(std::string name, int recoveryValue);
+	~Food();
 	int GetRecoveryValue();
+private:
+	int _recoveryValue;//回復量
 };
 
-class TrainingItem:Item
+//トレーニングアイテム
+class TrainingItem :public Item
 {
 public:
+	TrainingItem();
+	~TrainingItem();
 	int GetRisingValue();
+private:
+	int _rigingValue;
 };
 
-class PowerItem:Item
+//戦闘時アイテム
+class PowerItem :public Item
 {
 public:
+	PowerItem();
+	~PowerItem();
 	int GetRisingValue();
+private:
+	int _rigingValue;
 };
 

@@ -68,20 +68,28 @@ void GameManager::DoFeed(Food food)
 	_currentWeek++;
 }
 
+<<<<<<< HEAD
+//取得可能資格リストを取得
+=======
 //受験可能資格リスト取得
+>>>>>>> 75cea6c717bf508aa2dc51c52ce637c827dd50c3
 std::vector<Qualification> GameManager::GetAcquirableQualifications()
 {
 	return std::vector<Qualification>(_acquirableQualifications);
 }
 
+<<<<<<< HEAD
+//受験します
+=======
 //受験
+>>>>>>> 75cea6c717bf508aa2dc51c52ce637c827dd50c3
 bool GameManager::TakeExamination(Qualification qualification)
 {
 	size_t n = _acquirableQualifications.size();
 
 	for (size_t i = 0; i < n; i++)
 	{
-		if (_acquirableQualifications.at(i) == qualification)//同名アイテムを探す
+		if (_acquirableQualifications.at(i).GetItemName() == qualification.GetItemName())//同名アイテムを探す
 		{
 			_acquirableQualifications.erase(_acquirableQualifications.begin() + i);//見つけたら削除
 		}
@@ -90,14 +98,22 @@ bool GameManager::TakeExamination(Qualification qualification)
 	return true;
 }
 
+<<<<<<< HEAD
+//勉強します
+=======
 //勉強
+>>>>>>> 75cea6c717bf508aa2dc51c52ce637c827dd50c3
 void GameManager::DoStudy()
 {
 	_cleverness += 10;//仮の値
 	_currentWeek++;
 }
 
+<<<<<<< HEAD
+//ポケモンバトルをします
+=======
 //バトル
+>>>>>>> 75cea6c717bf508aa2dc51c52ce637c827dd50c3
 bool GameManager::DoBattle(PowerItem* powerUpItem)
 {
 	int battlPpower_enemy = (GetRand(3) + 1) * 100;//仮の値
