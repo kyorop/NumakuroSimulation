@@ -3,6 +3,7 @@
 
 class Item;
 enum Qualification;
+
 class GameManager
 {
 public:
