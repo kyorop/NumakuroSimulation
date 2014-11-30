@@ -51,7 +51,8 @@ void GameManager::Purchase(Item item)
 void GameManager::DoTraining(TrainingItem trainingItem)
 {
 	/*---í“¬—Í‚ğã¸‚³‚¹‚éŠÖ”---*/
-	_battlePower += 100;
+	_battlePower += 100;//‰¼‚Ì’l
+	_satiety -= 100;//‰¼‚Ì’l
 	_currentWeek++;
 }
 
