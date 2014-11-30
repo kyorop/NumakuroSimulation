@@ -7,6 +7,7 @@ SceneManager::SceneManager()
 	scene = std::make_shared<OpeningScene>();
 	scene->SetSceneManager(this);
 	IScene::gameManager = new GameManager();
+	IScene::gameManager->Init();
 }
 
 void SceneManager::ChangeScene(std::shared_ptr<IScene> nextScene)
