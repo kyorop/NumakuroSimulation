@@ -3,9 +3,10 @@
 
 class EndingScene
 	:public IScene
-	private:
 
 {
+	int GHandle1;
+	int GHandle2;
 public:
 	void Update() override;
 	void Draw() override;

@@ -3,7 +3,7 @@
 
 TitleScene::TitleScene()
 {
-	GHandle = LoadGraph("../../沼ゲー素材/タイトル.png");
+	GHandle = LoadGraph("numakuro/タイトル.png");
 }
 
 TitleScene::~TitleScene()

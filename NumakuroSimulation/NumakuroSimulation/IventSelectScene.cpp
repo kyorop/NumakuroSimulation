@@ -1,5 +1,6 @@
 ﻿#include "IventSelectScene.h"
 #include "DxLib.h"
+#include "TitleScene.h"
 
 IventSelectScene::IventSelectScene()
 {
@@ -8,7 +9,8 @@ IventSelectScene::IventSelectScene()
 
 void IventSelectScene::Update()
 {
-	
+	if (CheckHitKey(KEY_INPUT_SPACE))
+		ChangeScene(std::shared_ptr<TitleScene>());
 }
 
 void IventSelectScene::Draw()
