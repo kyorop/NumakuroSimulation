@@ -95,7 +95,7 @@ int GameManager::DoBattle(PowerItem* powerUpItem)
 	}
 
 	_satiety -= 100;//‰¼‚Ì’l
-	if (_battlePower >= battlPpower_enemy);
+	if (_battlePower >= battlPpower_enemy)
 	{
 		_money += 500;//‰¼‚Ì’l
 	}
