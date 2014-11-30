@@ -81,7 +81,7 @@ bool GameManager::TakeExamination(Qualification qualification)
 
 	for (size_t i = 0; i < n; i++)
 	{
-		if (_acquirableQualifications.at(i).GetItemName() == qualification.GetItemName())//同名アイテムを探す
+		if (_acquirableQualifications.at(i) == qualification)//同名アイテムを探す
 		{
 			_acquirableQualifications.erase(_acquirableQualifications.begin() + i);//見つけたら削除
 		}
