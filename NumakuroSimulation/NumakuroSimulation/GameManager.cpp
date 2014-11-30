@@ -1,4 +1,5 @@
 #include "GameManager.h"
+#include "Item.h"
 
 
 GameManager::GameManager()
