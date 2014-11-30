@@ -61,6 +61,7 @@ class TrainingItem :public Item
 {
 public:
 	TrainingItem();
+	TrainingItem(std::string name, int rigingValue);
 	~TrainingItem();
 	int GetRisingValue();
 private:
@@ -72,6 +73,7 @@ class PowerItem :public Item
 {
 public:
 	PowerItem();
+	PowerItem(std::string name, int rigingValue);
 	~PowerItem();
 	int GetRisingValue();
 private:

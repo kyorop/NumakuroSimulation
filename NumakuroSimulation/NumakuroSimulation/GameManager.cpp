@@ -22,7 +22,7 @@ void GameManager::Init()
 	_satiety = 100;
 	_currentWeek = 1;
 	_currentMystery = Vector2(0, 0);
-	std::vector<Item> its{ Food("Water", 10), Food("Water", 10) };
+	std::vector<Item> its{ Food("乾燥ワカメ", 20), Food("チキンクリスプ", 50), Food("ピッツァ",80),TrainingItem("プロテイン",20),TrainingItem("強くなれる薬",50),TrainingItem("もっと強くなる薬",80), PowerItem("リポD",20), PowerItem("レッドブル",50), PowerItem("安息香酸ナトリウムカフェイン",80) };
 }
 
 //購入可能アイテムリスト取得
@@ -48,11 +48,18 @@ void GameManager::Purchase(Item item)
 }
 
 //トレーニングを実行します
-void GameManager::DoTraining(TrainingItem trainingItem)
+void GameManager::DoTraining(TrainingItem* trainingItem)
 {
-	/*---戦闘力を上昇させる関数---*/
-	_battlePower += 100;//仮の値
-	_satiety -= 100;//仮の値
+	int powerup = 0;
+
+	/*---アイテムで_battlePowerにもたらされる効果---*/
+	if (trainingItem != NULL)
+	{
+		powerup = trainingItem->GetRisingValue();
+	}
+	_battlePower += powerup;
+	_battlePower += 100;
+	_satiety -= 10;
 }
 
 //餌付け
@@ -60,8 +67,9 @@ void GameManager::DoFeed(Food food)
 {
 	int recovery_value = food.GetRecoveryValue();
 	_satiety += recovery_value;
-
-	/*---上限を超えたらキャンセルするコードを書く---*/
+	/*----100を超えたら切りすて---*/
+	if (_satiety > 100)
+		_satiety = 100;
 
 }
 
@@ -83,29 +91,39 @@ bool GameManager::TakeExamination(Qualification qualification)
 			_acquirableQualifications.erase(_acquirableQualifications.begin() + i);//見つけたら削除
 		}
 	}
+
+
+
 	return true;
 }
 
 //勉強
 void GameManager::DoStudy()
 {
-	_cleverness += 10;//仮の値
+	_cleverness += 10;
 }
 
 //バトル
 bool GameManager::DoBattle(PowerItem* powerUpItem)
 {
-	int battlPpower_enemy = (GetRand(3) + 1) * 100;//仮の値
+	int enemy_power = (GetRand(3) + 1) * 100;//仮の値
+	int powerup = 0;
 
+		/*---アイテムで_battlePowerにもたらされる効果---*/
 	if (powerUpItem != NULL)
 	{
-		/*---アイテムで_battlePowerにもたらされる効果---*/
+		powerup = powerUpItem->GetRisingValue();
 	}
 
-	_satiety -= 100;//仮の値
-	if (_battlePower >= battlPpower_enemy)
+	/*---資格で_battlePowerにもたらされる効果---*/
+
+
+	int power = _battlePower + _satiety + powerup ;//sikakumo
+
+	_satiety -= 10;
+	if (power >= enemy_power)
 	{
-		_money += 500;//仮の値
+		_money += 500;
 	}
 	return true;
 }

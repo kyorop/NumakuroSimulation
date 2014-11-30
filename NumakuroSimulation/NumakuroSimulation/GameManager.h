@@ -17,7 +17,7 @@ public:
 	void Purchase(Item item);
 
 	//トレーニング
-	void DoTraining(TrainingItem trainingItem);
+	void DoTraining(TrainingItem* trainingItem);
 
 	//餌付け
 	void DoFeed(Food food);
