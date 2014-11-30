@@ -8,7 +8,9 @@ public:
 	BattleScene();
 private:
 	int isWon;
+	bool isBattled;
 public:
+	int handle;
 	int input;
 	void Update() override;
 	void Draw() override;

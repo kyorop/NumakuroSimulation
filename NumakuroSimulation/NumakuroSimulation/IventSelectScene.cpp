@@ -72,7 +72,7 @@ void IventSelectScene::Update()
 		inputFlag = false;
 	}
 
-	if (CheckHitKey(KEY_INPUT_Z))
+	if (CheckHitKey(KEY_INPUT_RETURN))
 	{
 		switch (eventCount)
 		{
@@ -101,6 +101,8 @@ void IventSelectScene::Update()
 
 void IventSelectScene::Draw()
 {
+	
+
 	DrawGraph(0, 0, GHandle, true);
 	for (int i = 0; i < 6;i++)
 	{
@@ -133,6 +135,10 @@ void IventSelectScene::Draw()
 	default: 
 		break;
 	}
+
+	DrawFormatString(30, 8, GetColor(0, 0, 0), "満腹度：%d", gameManager->GetSatiety());
+	DrawFormatString(30, 25, GetColor(0, 0, 0), "所持金：%d", gameManager->GetHavingManey());
+	DrawFormatString(150, 25, GetColor(0, 0, 0), "かしこさ：%d", gameManager->GetCleverness());
 }
 
 
