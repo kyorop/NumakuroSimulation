@@ -72,13 +72,35 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BattleScene.cpp" />
+    <ClCompile Include="EndingScene.cpp" />
+    <ClCompile Include="ExaminationScene.cpp" />
+    <ClCompile Include="FeedingScene.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
+    <ClCompile Include="IScene.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="IventSelectScene.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OpeningScene.cpp" />
+    <ClCompile Include="ShoppingScene.cpp" />
+    <ClCompile Include="StudyScene.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BattleScene.h" />
+    <ClInclude Include="EndingScene.h" />
+    <ClInclude Include="ExaminationScene.h" />
+    <ClInclude Include="FeedingScene.h" />
     <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameOverScene.h" />
+    <ClInclude Include="IScene.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="IventSelectScene.h" />
+    <ClInclude Include="OpeningScene.h" />
+    <ClInclude Include="ShoppingScene.h" />
+    <ClInclude Include="StudyScene.h" />
+    <ClInclude Include="TitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
