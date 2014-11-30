@@ -2,7 +2,11 @@
 #include <memory>
 #include "iscene.h"
 #include "titlescene.h"
+<<<<<<< HEAD
 #include "scenemanager.h"
+=======
+#include "IventSelectScene.h"
+>>>>>>> 86211c5064fdae8df06e57690894588a6c35b6fb
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine, int nCmdShow)
 {
@@ -13,8 +17,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	//•Ï”éŒ¾êŠ
+<<<<<<< HEAD
 	SceneManager sceneManager;
 	sceneManager.Initialize();
+=======
+	std::shared_ptr<IScene> scene;
+	scene = std::make_shared<IventSelectScene>();
+>>>>>>> 86211c5064fdae8df06e57690894588a6c35b6fb
 
 	while (true)
 	{

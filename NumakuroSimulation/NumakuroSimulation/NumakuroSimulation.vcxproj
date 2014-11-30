@@ -83,6 +83,7 @@
     <ClCompile Include="IventSelectScene.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="OpeningScene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="ShoppingScene.cpp" />
     <ClCompile Include="StudyScene.cpp" />
     <ClCompile Include="TitleScene.cpp" />
@@ -96,9 +97,11 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameOverScene.h" />
     <ClInclude Include="IScene.h" />
+    <ClInclude Include="ISceneManager.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="IventSelectScene.h" />
     <ClInclude Include="OpeningScene.h" />
+    <ClInclude Include="SceneManager.h" />
     <ClInclude Include="ShoppingScene.h" />
     <ClInclude Include="StudyScene.h" />
     <ClInclude Include="TitleScene.h" />
