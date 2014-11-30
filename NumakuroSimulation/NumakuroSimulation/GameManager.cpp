@@ -86,7 +86,7 @@ void GameManager::DoStudy()
 	_currentWeek++;
 }
 
-int GameManager::DoBattle(PowerItem* powerUpItem)
+bool GameManager::DoBattle(PowerItem* powerUpItem)
 {
 	int battlPpower_enemy = (GetRand(3) + 1) * 100;//‰¼‚Ì’l
 
@@ -101,6 +101,7 @@ int GameManager::DoBattle(PowerItem* powerUpItem)
 		_money += 500;//‰¼‚Ì’l
 	}
 	_currentWeek++;
+	return true;
 }
 
 //Œ»İ‚Ì–• “x‚ğæ“¾
