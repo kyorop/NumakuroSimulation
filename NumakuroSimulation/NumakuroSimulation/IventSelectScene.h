@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "iscene.h"
+#include <memory>
 
 class IventSelectScene
 	:public IScene
