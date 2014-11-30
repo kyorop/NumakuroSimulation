@@ -53,6 +53,9 @@ public:
 
 	//現在のミステリーパラメータを取得
 	Vector2 GetCurrentMystery();
+
+	//この週を終了する
+	void FinishThisWeek();
 	
 
 private:

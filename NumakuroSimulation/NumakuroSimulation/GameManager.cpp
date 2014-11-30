@@ -45,7 +45,6 @@ void GameManager::Purchase(Item item)
 			_purchasableItems.erase(_purchasableItems.begin() + i);//見つけたら削除
 		}
 	}
-	_currentWeek++;
 }
 
 //トレーニングを実行します
@@ -54,7 +53,6 @@ void GameManager::DoTraining(TrainingItem trainingItem)
 	/*---戦闘力を上昇させる関数---*/
 	_battlePower += 100;//仮の値
 	_satiety -= 100;//仮の値
-	_currentWeek++;
 }
 
 //餌付け
@@ -65,7 +63,6 @@ void GameManager::DoFeed(Food food)
 
 	/*---上限を超えたらキャンセルするコードを書く---*/
 
-	_currentWeek++;
 }
 
 //受験可能資格リスト取得
@@ -86,7 +83,6 @@ bool GameManager::TakeExamination(Qualification qualification)
 			_acquirableQualifications.erase(_acquirableQualifications.begin() + i);//見つけたら削除
 		}
 	}
-	_currentWeek++;
 	return true;
 }
 
@@ -94,7 +90,6 @@ bool GameManager::TakeExamination(Qualification qualification)
 void GameManager::DoStudy()
 {
 	_cleverness += 10;//仮の値
-	_currentWeek++;
 }
 
 //バトル
@@ -112,7 +107,6 @@ bool GameManager::DoBattle(PowerItem* powerUpItem)
 	{
 		_money += 500;//仮の値
 	}
-	_currentWeek++;
 	return true;
 }
 
@@ -162,4 +156,10 @@ int GameManager::GetWeek()
 Vector2 GameManager::GetCurrentMystery()
 {
 	return Vector2(_currentMystery);
+}
+
+//この週を終了する
+void GameManager::FinishThisWeek()
+{
+	_currentWeek++;
 }
