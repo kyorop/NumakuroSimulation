@@ -2,6 +2,7 @@
 #include <memory>
 #include "iscene.h"
 #include "titlescene.h"
+#include "scenemanager.h"
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine, int nCmdShow)
 {
@@ -12,22 +13,24 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	//•Ï”éŒ¾êŠ
-	std::shared_ptr<IScene> scene;
-	scene = std::make_shared<TitleScene>();
+	SceneManager sceneManager;
+	sceneManager.Initialize();
 
 	while (true)
 	{
 		ClearDrawScreen();
 
 		//‚±‚±‚É•`‰æˆ—‚µ‚Ä‚Ë
-		scene->Update();
-		scene->Draw();
+		sceneManager.Update();
+		sceneManager.Draw();
 
 		ScreenFlip();
 
 		if (ProcessMessage() < 0)
 			break;
 	}
+
+	sceneManager.Fin();
 
 	DxLib_End();
 	
