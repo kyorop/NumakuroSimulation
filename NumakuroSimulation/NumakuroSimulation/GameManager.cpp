@@ -12,6 +12,17 @@ GameManager::~GameManager()
 {
 }
 
+void GameManager::Init()
+{
+	/*初期化処理*/
+	_money = 1000;
+	_cleverness = 10;
+	_battlePower = 100;
+	_satiety = 100;
+	_currentWeek = 1;
+	_currentMystery = Vector2(0, 0);
+}
+
 //購入可能アイテムリスト取得
 std::vector<Item> GameManager::GetPurchasableItems()
 {
