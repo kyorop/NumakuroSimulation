@@ -63,6 +63,8 @@ public:
 	TrainingItem();
 	~TrainingItem();
 	int GetRisingValue();
+private:
+	int _rigingValue;
 };
 
 //í“¬ƒAƒCƒeƒ€
@@ -72,5 +74,7 @@ public:
 	PowerItem();
 	~PowerItem();
 	int GetRisingValue();
+private:
+	int _rigingValue;
 };
 
