@@ -9,6 +9,9 @@ public:
 	GameManager();
 	~GameManager();
 
+	//‰Šú‰»ˆ—
+	void Init();
+
 	//”ƒ‚¢•¨
 	std::vector<Item> GetPurchasableItems();
 	void Purchase(Item item);
