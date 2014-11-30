@@ -4,7 +4,7 @@
 
 IventSelectScene::IventSelectScene()
 {
-	GHandle = LoadGraph("../../沼ゲー素材/ゲーム画面.png");
+	GHandle = LoadGraph("numakuro/ゲーム画面.png");
 }
 
 void IventSelectScene::Update()
