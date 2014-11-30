@@ -17,6 +17,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,LPSTR lpCmdLine,
 	SceneManager sceneManager;
 	sceneManager.Initialize();
 
+	ChangeFont("ƒƒCƒŠƒI");
+
 	while (true)
 	{
 		ClearDrawScreen();

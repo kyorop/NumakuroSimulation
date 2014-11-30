@@ -17,9 +17,13 @@ void OpeningScene::Update()
 {
 	if (CheckHitKey(KEY_INPUT_1))
 		ChangeScene(std::make_shared<IventSelectScene>());
+	if (CheckHitKey(KEY_INPUT_SPACE))x++;
+	if (x == 2)ChangeScene(std::make_shared<IventSelectScene>());
 }
 
 void OpeningScene::Draw()
 {
 	DrawGraph(0, 0, GHandle, true);
+	DrawString(50, 450, op[x], GetColor(0, 0, 0));
+	
 }
