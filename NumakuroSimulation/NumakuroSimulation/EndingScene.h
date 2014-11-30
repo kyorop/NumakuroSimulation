@@ -11,8 +11,6 @@ public:
 	void Update() override;
 	void Draw() override;
 public:
-	int GHandle1;
-	int GHandle2;
 	EndingScene();
 private:
 	char *ed[3];
