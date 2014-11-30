@@ -24,6 +24,7 @@
     <ClCompile Include="Item.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="IScene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
@@ -55,9 +56,9 @@
       <Filter>ソース ファイル</Filter>
     </ClCompile>
     <ClCompile Include="GameOverScene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+=======
     <ClCompile Include="Vector2.cpp">
+>>>>>>> 2d7ba787dcff57b863271757b226121a4bed2959
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
@@ -68,9 +69,7 @@
     <ClInclude Include="Item.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="IScene.h">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
@@ -102,6 +101,9 @@
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="GameOverScene.h">
+=======
+    <ClInclude Include="Vector2.h">
+>>>>>>> 2d7ba787dcff57b863271757b226121a4bed2959
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
