@@ -81,6 +81,21 @@ int GameManager::GetCleverness()
 {
 	return _cleverness;
 }
-int GameManager::GetHavingManey();
-int GameManager::GetWeek();
-Vector2 GameManager::GetCurrentMystery();
+
+//現在の所持金を取得
+int GameManager::GetHavingManey()
+{
+	return _money;
+}
+
+//現在の週を取得
+int GameManager::GetWeek()
+{
+	return _currentWeek;
+}
+
+//現在のミステリーパラメータを取得
+Vector2 GameManager::GetCurrentMystery()
+{
+	return Vector2(0, 0);
+}
